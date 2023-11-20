@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h2>1/ Different between map(), foreach(), filter(), find() </h2>
+ <P>The find() method is used to return the first element in an array that satisfies a provided testing function. It stops searching the array once it finds an item that matches the criteria and returns that element. If no element satisfies the condition, it returns undefined</P>
+
+ <P>2/filter(): The filter() method creates a new array with all elements that pass the test implemented by the provided function. It returns a new array containing only the elements that meet the condition</P>
+
+
+ <P>3/map(): The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. It transforms each element of the array using the provided function and returns a new array based on the results.</P>
+
+ <P>4/forEach(): The forEach() method executes a provided function once for each array element. It doesn't create a new array; rather, it is used when you want to perform a specific action or operation on each element of the array.</P>
+
+ <h2>differents between  LocalStorage, SessionStorage, cookes</h2>
+
+ <p>1/Cookies are primarily used for communication between client and server, have limited storage, and can have expiration dates.</p>
+    <p>2/LocalStorage provides persistent storage without an expiration date, and the data remains even after the browser is closed. It's accessible only on the client-side.</p>
+
+    <p>3/SessionStorage is similar to LocalStorage but is cleared when the browsing session ends (closing the browser/tab). It's also accessible only on the client-side.</p>
+
+
+    <h2>what is event loop</h2>
+    <p>Start and End will be logged first as they are synchronous and  get added to the call stack.
+        setTimeout is an asynchronous operation and gets handed off to the browser's Web API. Even though the delay is set to 0 milliseconds, it doesn't execute immediately.
+        Once the call stack is clear (after End), the setTimeout callback is placed in the task queue.
+        The event loop notices that the call stack is empty, so it pushes the setTimeout callback onto the stack for execution.
+        This cycle of handling asynchronous operations via the event loop allows JavaScript to maintain responsiveness while dealing with potentially time-consuming tasks without blocking the main execution thread.</p>
+</body>
+</html>
